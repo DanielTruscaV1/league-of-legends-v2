@@ -13,7 +13,7 @@
 .container li
 {
     display:inline-block;
-    margin:30px;
+    margin:20px;
     cursor:pointer;
 }
 .container li:hover
@@ -30,5 +30,5 @@
     display:inline-block;
     cursor:pointer;
     position:relative;
-    left:450px;
+    left:550px;
 }

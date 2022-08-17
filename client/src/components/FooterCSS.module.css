@@ -1,0 +1,23 @@
+.container
+{
+    background-color:rgb(230, 230, 230);
+    position:relative;
+    top:100px;
+    font-family:arial;
+    font-size:20px;
+}
+.container ul
+{
+    list-style-type:none;
+    display:inline-block;
+}
+.container li
+{
+    display:inline-block;
+    margin:20px;
+    cursor:pointer;
+}
+.container li:hover
+{
+    color:rgb(150, 150, 150);
+}
