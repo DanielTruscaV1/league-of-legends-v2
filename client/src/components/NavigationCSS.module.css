@@ -20,15 +20,21 @@
 {
     color:rgb(200, 200, 200);
 }
-.container select
+.container button
 {
     width:150px;
-    background-color:rgb(50, 50, 50);
+    background-color:transparent;
     color:white;
     border:none;
     font-size:20px;
     display:inline-block;
     cursor:pointer;
-    position:relative;
-    left:550px;
+}
+.container button:hover
+{
+    color:rgb(200, 200, 200);
+}
+.special
+{
+    margin-left:300px;
 }

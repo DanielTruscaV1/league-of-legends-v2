@@ -3,8 +3,8 @@ import style from "./HeaderCSS.module.css";
 
 function Header() {
   return (
-    <div className={style.container}>
-        <h1 className={style.logo}>LOP</h1>
+    <div className={style.container} id="header">
+        <h1 className={style.logo} id="title">LOP</h1>
         <div className={style.container2}>
             <h1 className={style.title}>
                 League of Pros

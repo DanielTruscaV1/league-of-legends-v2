@@ -3,7 +3,7 @@ import style from "./FooterCSS.module.css";
 
 function Footer() {
   return (
-    <div className={style.container}>
+    <div className={style.container} id="footer">
         <ul>
             <li>
                 Cookie policy
