@@ -1,7 +1,7 @@
 import React from 'react'
 import style from "./NavigationCSS.module.css";
 
-function Navigation() {
+function Navigation(props) {
   const changeToWhiteTheme = () => {
     document.getElementById("header").style.backgroundColor = "white";
     document.getElementById("title").style.borderColor = "black";
@@ -38,24 +38,56 @@ function Navigation() {
                 Home
               </a>
             </li>
-            <li>
-              <a href="http://localhost:3000/signup">
-                Sign-up
-              </a>
-            </li>
-            <li>
-              <a href = "http://localhost:3000/signin">
-                Sign-in
-              </a>
-            </li>
-            <li>
+            {
+              props.userIsSignedIn === false ?
+              <li>
+                <a href="http://localhost:3000/signup">
+                  Sign-up
+                </a>
+              </li>:
+              <>
+              </>
+            }
+            {
+              props.userIsSignedIn === false ?
+              <li>
+                <a href="http://localhost:3000/signin">
+                  Sign-in
+                </a>
+              </li>:
+              <>
+              </>
+            }
+            {
+              props.userIsSignedIn === true ?
+              <li>
+                <a href="#" onClick={() => {props.setUserIsSignedIn(false)}}>
+                  Sign-out
+                </a>
+              </li>:
+              <>
+              </>
+            }
+            {
+              props.userIsSignedIn === true ?
+              <li>
                 <a href="http://localhost:3000/profile">
                   Profile
                 </a>
-            </li>
-            <li>
-                GPI
-            </li>
+              </li>:
+              <>
+              </>
+            }
+            {
+              props.userIsSignedIn === true ?
+              <li>
+                <a href="http://localhost:3000/gpi">
+                  GPI
+                </a>
+              </li>:
+              <>
+              </>
+            }
             <li>
                 <a href="http://localhost:3000/champions">
                   Champions
@@ -73,9 +105,10 @@ function Navigation() {
               </a>
             </li>
         </ul>
-        <button onClick={changeToWhiteTheme} className={style.special}>White theme</button>
-        <button onClick={changeToBlackTheme}>Black theme</button>
-        <button onClick={changeToPurpleTheme}>Purple theme</button>
+        
+        <button className={style.button3} id="purple" onClick={changeToPurpleTheme}></button>
+        <button className={style.button2} id="black" onClick={changeToBlackTheme}></button>
+        <button className={style.button1} onClick={changeToWhiteTheme} id="special"></button>
     </div>
   )
 }

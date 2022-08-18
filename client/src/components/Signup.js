@@ -3,7 +3,7 @@ import style from "./SignupCSS.module.css";
 import {UserAuth} from "../Auth";
 import {useNavigate} from "react-router-dom";
 
-function Signup() {
+function Signup(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -17,6 +17,7 @@ function Signup() {
     try{
       await createUser(email, password);
       alert("You have been successfully signed up!");
+      props.setUserIsSignedIn(true);
       navigate("/profile");
     }catch(e){
       setError(e.message);

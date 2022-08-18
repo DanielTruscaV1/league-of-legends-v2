@@ -3,7 +3,7 @@ import style from "./SigninCSS.module.css";
 import {useNavigate} from "react-router-dom";
 import {UserAuth} from "../Auth";
 
-function Signin() {
+function Signin(props) {
   const {signIn} = UserAuth(); 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,6 +16,7 @@ function Signin() {
     try{
       await signIn(email, password);
       alert("You have been signed in successfully!");
+      props.setUserIsSignedIn(true);
       navigate("/profile");
     }catch(e)
     {

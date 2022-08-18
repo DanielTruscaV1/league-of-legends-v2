@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import Home from "./components/Home";
@@ -13,18 +14,19 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthContextProvider } from "./Auth";
 
 function App() {
+  const [userIsSignedIn, setUserIsSignedIn] = useState(false);
   return (
     <>
       <AuthContextProvider>
         <Header />
-        <Navigation />
+        <Navigation setUserIsSignedIn={setUserIsSignedIn} userIsSignedIn={userIsSignedIn}/>
         <BrowserRouter>
           <Routes>
             <Route index path="/" element={<Home />}>
             </Route>
-            <Route path="/signup" element={<Signup/>}>
+            <Route path="/signup" element={<Signup setUserIsSignedIn={setUserIsSignedIn}/>}>
             </Route>
-            <Route path="/signin" element={<Signin/>}>
+            <Route path="/signin" element={<Signin setUserIsSignedIn={setUserIsSignedIn}/>}>
             </Route>
             <Route path="/profile" element={<Profile />}>
             </Route>
