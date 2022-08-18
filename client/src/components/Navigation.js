@@ -9,6 +9,7 @@ function Navigation() {
     document.body.style.backgroundColor = "white";
     document.body.style.color= "black";
     document.getElementById("footer").style.backgroundColor="rgb(230, 230, 230)";
+    document.getElementById("signupForm").style.backgroundColor="rgb(230, 230, 230)";
   }
   const changeToBlackTheme = () => {
     document.getElementById("header").style.backgroundColor = "rgb(30, 30, 30)";
@@ -17,6 +18,7 @@ function Navigation() {
     document.body.style.backgroundColor = "rgb(30, 30, 30)";
     document.body.style.color= "white";
     document.getElementById("footer").style.backgroundColor="rgb(50, 50, 50)";
+    document.getElementById("signupForm").style.backgroundColor="rgb(50, 50, 50)";
   }
   const changeToPurpleTheme = () => {
     document.getElementById("header").style.backgroundColor = "rgb(120, 40, 120)";
@@ -25,19 +27,31 @@ function Navigation() {
     document.body.style.backgroundColor = "rgb(120, 40, 120)";
     document.body.style.color= "white";
     document.getElementById("footer").style.backgroundColor="rgb(80, 20, 80)";
+    document.getElementById("signupForm").style.backgroundColor="rgb(80, 20, 80)";
   }
 
   return (
     <div className={style.container} id="navigation">
         <ul>
             <li>
+              <a href="http://localhost:3000/">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/signup">
                 Sign-up
+              </a>
             </li>
             <li>
+              <a href = "http://localhost:3000/signin">
                 Sign-in
+              </a>
             </li>
             <li>
-                Profile
+                <a href="http://localhost:3000/profile">
+                  Profile
+                </a>
             </li>
             <li>
                 GPI

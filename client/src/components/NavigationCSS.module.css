@@ -16,10 +16,6 @@
     margin:20px;
     cursor:pointer;
 }
-.container li:hover
-{
-    color:rgb(200, 200, 200);
-}
 .container button
 {
     width:150px;
@@ -36,5 +32,14 @@
 }
 .special
 {
-    margin-left:300px;
+    margin-left:200px;
+}
+a
+{
+    color:white;
+    text-decoration:none;
+}
+a:hover 
+{
+    color:rgb(200, 200, 200);
 }
