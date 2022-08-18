@@ -57,7 +57,9 @@ function Navigation() {
                 GPI
             </li>
             <li>
-                Champions
+                <a href="http://localhost:3000/champions">
+                  Champions
+                </a>
             </li>
             <li>
                 Items

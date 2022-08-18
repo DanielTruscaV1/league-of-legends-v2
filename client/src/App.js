@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Signup from "./components/Signup";
 import Signin from "./components/Signin";
 import Profile from "./components/Profile";
+import Champions from "./components/Champions";
 import "./AppCSS.css";
 //Import the elements of the "router" library
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -25,6 +26,8 @@ function App() {
             <Route path="/signin" element={<Signin/>}>
             </Route>
             <Route path="/profile" element={<Profile />}>
+            </Route>
+            <Route path="/champions" element={<Champions/>}>
             </Route>
           </Routes>
         </BrowserRouter>
