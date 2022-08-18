@@ -11,10 +11,16 @@ import anivia from "../images/anivia.jpg";
 import annie from "../images/annie.jpg";
 import aphelios from "../images/aphelios.jpg";
 import ashe from "../images/ashe.jpg";
+import aurelion from "../images/aurelion.jpg";
+import azir from "../images/azir.jpg";
+import bard from "../images/bard.jpg";
+import bel from "../images/bel.jpg";
+import blitzcrank from "../images/blitzcrank.jpg";
 
 function Champions() {
   const [images1, setImages1] = useState([aatrox, ahri, akali, akshan, alistar]);
   const [images2, setImages2] = useState([amumu, anivia, annie, aphelios, ashe]);
+  const [images3, setImages3] = useState([aurelion, azir, bard, bel, blitzcrank]);
   return (
     <div className={style.container}>
         <h1>
@@ -43,6 +49,14 @@ function Champions() {
                         alt=""/>
                     })
                 }   
+                {
+                    images3.map(image => {
+                        return <img 
+                        className={style.championImage}
+                        src={image} 
+                        alt=""/>
+                    })
+                }
             </div>
     </div>
   )

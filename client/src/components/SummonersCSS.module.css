@@ -1,0 +1,27 @@
+.container
+{
+    font-family:arial;
+}
+.description
+{
+    font-size:20px;
+    text-align:center;
+}
+.input
+{
+    width:500px;
+    height:30px;
+    margin-left:33%;
+    font-size:20px;
+}
+.button
+{
+    width:80px;
+    height:30px;
+    border-radius:10px;
+    font-size:20px;
+    border:none;
+    background-color:rgb(100, 100, 200);
+    color:white;
+    cursor:pointer;
+}

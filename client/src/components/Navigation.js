@@ -67,6 +67,11 @@ function Navigation() {
             <li>
                 Tier List
             </li>
+            <li>
+              <a href="http://localhost:3000/summoners">
+                Summoners
+              </a>
+            </li>
         </ul>
         <button onClick={changeToWhiteTheme} className={style.special}>White theme</button>
         <button onClick={changeToBlackTheme}>Black theme</button>
