@@ -16,6 +16,7 @@ function Summoners() {
       console.log(error);
     })
   }
+  console.log(gameList);
   return (
     <div className={style.container}>
         <h1 className={style.title}>
@@ -38,18 +39,35 @@ function Summoners() {
                     <p>Game mode: {gameData.info.gameMode}</p>
                     <p>Game duration: {parseInt(gameData.info.gameDuration/60)} minutes</p>
                     <h4>Summoners: </h4>
+                    <div className={style.container2}>
+                      <p>Summoner name:</p>
+                      <p>Lane:</p>
+                      <p>Champion name:</p>
+                      <p>Champion level:</p>
+                      <p>KDA:</p>
+                      <p>Gold:</p>
+                      <p>Vision score:</p>
+                      <p>Damage:</p>
+                    </div>
                     {gameData.info.participants.map((data, participantsIndex) => 
-                      <>
-                        <p>Summoner name: {data.summonerName}</p>
-                        <p>Lane: {data.lane}</p>
-                        <p>Champion name: {data.championName}</p>
-                        <p>Champion level: {data.champLevel}</p>
-                        <p>KDA: {data.kills}/{data.deaths}/{data.assists}</p>
-                        <p>Gold: {data.goldEarned}</p>
-                        <p>Vision score: {data.visionScore}</p>
-                        <p>Damage: {data.totalDamageDealtToChampions}</p>
-                        <hr/>
-                      </>
+                      <div className={participantsIndex < 5?
+                          gameData.info.teams[0].win === true ?
+                          style.container2Victory:
+                          style.container2Defeat
+                          :
+                          gameData.info.teams[1].win === true?
+                          style.container2Victory:
+                          style.container2Defeat
+                        }>
+                        <p>{data.summonerName}</p>
+                        <p>{data.lane}</p>
+                        <p>{data.championName}</p>
+                        <p>{data.champLevel}</p>
+                        <p>{data.kills}/{data.deaths}/{data.assists}</p>
+                        <p>{data.goldEarned}</p>
+                        <p>{data.visionScore}</p>
+                        <p>{data.totalDamageDealtToChampions}</p>
+                      </div>
                     )}
                   </div>
                 </>

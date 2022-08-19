@@ -5,7 +5,7 @@ const axios = require("axios");
 var app = express();
 app.use(cors());
 
-const API_KEY = "RGAPI-3cb2eeba-1b9e-498a-9129-7b4c3627a3c4s";
+const API_KEY = "RGAPI-3cb2eeba-1b9e-498a-9129-7b4c3627a3c4";
 
 function getPlayerPUUID(playerName)
 {
